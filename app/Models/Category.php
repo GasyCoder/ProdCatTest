@@ -40,4 +40,6 @@ class Category extends Model
             }
         });
     }
+
+
 }

@@ -7,6 +7,10 @@
         "dev": "vite"
     },
     "devDependencies": {
+        "@egoist/tailwindcss-icons": "^1.9.0",
+        "@iconify-json/lucide": "^1.2.57",
+        "@iconify-json/mdi": "^1.2.3",
+        "@iconify/json": "^2.2.360",
         "@tailwindcss/forms": "^0.5.2",
         "@tailwindcss/vite": "^4.0.0",
         "alpinejs": "^3.4.2",
