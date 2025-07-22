@@ -132,18 +132,18 @@
     <div class="mt-8">
         <h2 class="text-lg font-semibold text-gray-900 mb-4">Actions rapides</h2>
         <div class="flex flex-wrap gap-4">
-            <a href="{{ route('admin.produits.create') }}" 
+            <a href="{{ route('admin.produits.index') }}" 
                class="inline-flex items-center px-4 py-2 bg-gray-900 text-white rounded-lg hover:bg-gray-700 transition-colors">
-                <i class="i-lucide-plus w-4 h-4 mr-2"></i>
-                Nouveau Produit
+                <i class="i-lucide-list w-4 h-4 mr-2"></i>
+                Lister toutes les produits
             </a>
-            <a href="{{ route('admin.categories.create') }}" 
+            <a href="{{ route('admin.categories.index') }}" 
                class="inline-flex items-center px-4 py-2 bg-white border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors">
-                <i class="i-lucide-plus w-4 h-4 mr-2"></i>
-                Nouvelle Catégorie
+                <i class="i-lucide-list w-4 h-4 mr-2"></i>
+                 Lister toutes les catégories
             </a>
             <a href="{{ route('admin.produits.export') }}" 
-               class="inline-flex items-center px-4 py-2 bg-white border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors">
+               class="inline-flex items-center px-4 py-2 bg-green-600 border border-green-300 text-gray-800 rounded-lg hover:bg-gray-50 transition-colors">
                 <i class="i-lucide-download w-4 h-4 mr-2"></i>
                 Exporter CSV
             </a>

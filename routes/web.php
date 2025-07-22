@@ -56,6 +56,7 @@ Route::middleware(['auth', 'verified', 'admin'])->prefix('admin')->name('admin.'
 
     //Export CSV
     Route::get('/produits/export', [AdminProductController::class, 'exportCsv'])->name('produits.export');
+    
 });
 
 require __DIR__.'/auth.php';

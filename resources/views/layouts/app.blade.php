@@ -12,6 +12,8 @@
     
     <!-- Scripts -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
+    <!-- SweetAlert2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 <body class="bg-gray-50 font-sans min-h-screen flex flex-col">
     <!-- Navigation -->
@@ -210,28 +212,6 @@
 
     <!-- Flash Messages -->
     <main class="py-6 flex-grow">
-        @if (session('success'))
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-4">
-                <div class="bg-green-50 border-l-4 border-green-400 p-4 rounded-r">
-                    <div class="flex items-center">
-                        <i class="i-lucide-check-circle w-5 h-5 text-green-400 mr-3"></i>
-                        <span class="text-green-700 font-medium">{{ session('success') }}</span>
-                    </div>
-                </div>
-            </div>
-        @endif
-
-        @if (session('error'))
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-4">
-                <div class="bg-red-50 border-l-4 border-red-400 p-4 rounded-r">
-                    <div class="flex items-center">
-                        <i class="i-lucide-alert-circle w-5 h-5 text-red-400 mr-3"></i>
-                        <span class="text-red-700 font-medium">{{ session('error') }}</span>
-                    </div>
-                </div>
-            </div>
-        @endif
-
         @yield('content')
     </main>
 
@@ -265,5 +245,33 @@
             }
         });
     </script>
+    @if (session('success'))
+        <script>
+            Swal.fire({
+                toast: true,
+                position: 'top-end',
+                icon: 'success',
+                title: '{{ session('success') }}',
+                showConfirmButton: false,
+                timer: 3000,
+                timerProgressBar: true,
+            });
+        </script>
+    @endif
+    @if (session('error'))
+        <script>
+            Swal.fire({
+                toast: true,
+                position: 'top-end',
+                icon: 'error',
+                title: '{{ session('error') }}',
+                showConfirmButton: false,
+                timer: 3000,
+                timerProgressBar: true,
+            });
+        </script>
+    @endif
+
+    @yield('scripts')
 </body>
 </html>
