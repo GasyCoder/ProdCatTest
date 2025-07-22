@@ -10,7 +10,7 @@
     ]" />
 
     <div class="flex justify-between items-center mb-6">
-        <h1 class="text-2xl font-bold text-gray-900">Liste des catégories</h1>
+        <h1 class="text-2xl font-bold text-gray-900">Liste des catégories ({{ $categories->total() }})</h1>
         <a href="{{ route('admin.categories.create') }}" class="inline-flex items-center px-4 py-2 bg-gray-900 text-white rounded-lg hover:bg-gray-700">
             <i class="i-lucide-plus w-4 h-4 mr-2"></i> Ajouter une catégorie
         </a>
